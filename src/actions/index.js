@@ -2,7 +2,6 @@ import { FETCH_POSTS, NEW_POST } from './types';
 import posts from '../api/posts';
 
 export const fetchPosts = () => async dispatch => {
-  console.log("fetching")
   const response = await posts.get('/posts');
 
   dispatch({
@@ -17,11 +16,17 @@ export const createPost = (postData) => async dispatch => {
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify(postData)
+    body: postData
   })
+
+  const newItem = {
+    id: response.data.id,
+    title: response.data.body.title,
+    body: response.data.body.body
+  }
 
   dispatch({
     type: NEW_POST,
-    payload: response
+    payload: newItem
   })
 }
