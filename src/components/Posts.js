@@ -28,7 +28,6 @@ class Post extends Component {
         this.setState({
           posts: data.data
         })
-        console.log(this.state.posts)
       })
       .catch((data) => {
         console.log(data)
