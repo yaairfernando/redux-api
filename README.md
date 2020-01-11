@@ -27,6 +27,8 @@
 ## Table of Contents
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Required Installations](#Required-Installations)
+* [Instructions](#Instructions)
 * [Contact](#contact)
 
 ## About The Project
@@ -44,6 +46,57 @@ The project was developed using the following technologies:
 - [BOOTSTRAP](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 - [STYLED-COMPONENTS](https://www.styled-components.com/)
 - [JSONPLACEHOLDER](http://jsonplaceholder.typicode.com/)
+
+## Required Installations
+
+<p>Install the following to get this project running in your machine:</p>
+
+* Git 
+* Node
+* NPM
+
+## Instructions
+
+<p>Follow these steps:</p>
+
+Clone the Repository
+
+```Shell
+user@pc:~$ git clone https://github.com/YairFernando67/redux-api
+```
+
+Click on the console and to go to the folder that was created
+
+```Shell
+user@pc:~$ cd redux-api
+```
+
+Install dependencies
+
+
+```Shell
+user@pc:~$ npm init
+```
+```Shell
+user@pc:~$ npm i --save redux, react-redux, redux-thunk
+```
+```Shell
+user@pc:~$ npm i --save axios
+```
+```Shell
+user@pc:~$ npm i --save styled-components
+```
+```Shell
+user@pc:~$ npm i --save bootstrap
+```
+
+Start the local server with:
+
+```Shell
+user@pc:~$ npm start
+```
+
+Open your browser on [http://localhost:3000](http://localhost:3000)
 
 ## Contact
 
