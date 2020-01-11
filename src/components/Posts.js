@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import PostItem from './PostItem';
-import axios from 'axios';
+import { connect } from 'react-redux'
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import PostItem from './PostItem';
+import { fetchPosts } from '../actions';
 
 const Grid = styled.div`
   display: grid;
@@ -13,28 +15,20 @@ const Grid = styled.div`
   }
 `
 
-class Post extends Component {
-  constructor(props) {
-    super(props);
+class Posts extends Component {
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
 
-    this.state = {
-      posts: []
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.newPost) {
+      this.props.posts.unshift(nextProps.newPost);
     }
   }
 
-  componentDidMount() {
-    axios.get('http://jsonplaceholder.typicode.com/posts')
-      .then((data) =>{
-        this.setState({
-          posts: data.data
-        })
-      })
-      .catch((data) => {
-        console.log(data)
-      })
-  }
   render() {
-    const postItems = this.state.posts.map((post) =>{
+    console.log(this.props.newPost.data)
+    const postItems = this.props.posts.map((post) =>{
       return <PostItem key={post.id} title={post.title} body={post.body} />
     })
     return(
@@ -43,4 +37,17 @@ class Post extends Component {
   };
 };
 
-export default Post;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts.items,
+    newPost: state.posts.item
+  }
+}
+
+Posts.propTypes = {
+  fetchPosts: PropTypes.func.isRequired,
+  posts: PropTypes.array.isRequired,
+  newPost: PropTypes.object.isRequired
+}
+
+export default connect(mapStateToProps, { fetchPosts })(Posts);
