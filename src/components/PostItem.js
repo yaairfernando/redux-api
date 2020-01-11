@@ -3,20 +3,17 @@ import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Card = styled.div`
-  transtion: all 0.5s ease;
+background: #0073AA !important;
+transtion: all 1.5s ease-out;
   &:hover {
     box-shadow: 1px 3px 4px #758184 !important;
   }
 `
 const Title = styled.div`
   font-size: 18px;
+  background: #0073AA;
   text-align: center;
   transition: all 0.5s ease;
-  &:hover {
-    color: black;
-    background: #fff;
-    border: none;
-  }
 `
 const Body = styled.div`
   font-size: 12px;
@@ -26,7 +23,7 @@ const Body = styled.div`
 
 const PostItem = ({title, body}) => {
   return(
-    <Card className="card text-white bg-dark mb-3">
+    <Card className="card mb-3 text-white">
       <Title className="card-header">
         {title}
       </Title>
