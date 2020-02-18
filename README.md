@@ -3,6 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield2]][linkedin-url2]
+[![Hireable][hireable]][hireable-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -10,7 +11,7 @@
  <h2 align="center"> React and redux API </h2>
 
   <p align="center">
-      Project that makes an API request to JSONPLACEHOLDER to get a list of posts and manage the data using Redux
+      Project that makes an API request to Json Placeholder to get a list of posts and manage the data using Redux
     <br />
     <a href="https://github.com/YairFernando67/redux-api"><strong>Explore the docs »</strong></a>
     <br />
@@ -30,6 +31,8 @@
 * [Required Installations](#Required-Installations)
 * [Instructions](#Instructions)
 * [Contact](#contact)
+* [Contributing](#Contributing)
+* [Show your support](#Show-your-support)
 
 ## About The Project
 
@@ -42,16 +45,15 @@ The project was developed using the following technologies:
 - [React-Redux](https://github.com/reduxjs/react-redux)
 - [Redux-thunk](https://github.com/reduxjs/redux-thunk)
 - [JSX](https://reactjs.org/docs/introducing-jsx.html)
-- [AXIOS](https://github.com/axios/axios)
-- [BOOTSTRAP](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-- [STYLED-COMPONENTS](https://www.styled-components.com/)
-- [JSONPLACEHOLDER](http://jsonplaceholder.typicode.com/)
+- [Axios](https://github.com/axios/axios)
+- [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+- [Styled-Components](https://www.styled-components.com/)
+- [Json Placeholder](http://jsonplaceholder.typicode.com/)
 
 ## Required Installations
 
 <p>Install the following to get this project running in your machine:</p>
 
-* Git 
 * Node
 * NPM
 
@@ -73,21 +75,8 @@ user@pc:~$ cd redux-api
 
 Install dependencies
 
-
 ```Shell
-user@pc:~$ npm init
-```
-```Shell
-user@pc:~$ npm i --save redux, react-redux, redux-thunk
-```
-```Shell
-user@pc:~$ npm i --save axios
-```
-```Shell
-user@pc:~$ npm i --save styled-components
-```
-```Shell
-user@pc:~$ npm i --save bootstrap
+user@pc:~/redux-api$ npm install
 ```
 
 Start the local server with:
@@ -143,4 +132,6 @@ Give a ⭐️ if you like this project!
 [license-url]: https://github.com/YairFernando67/redux-api/blob/master/LICENSE.txt
 [linkedin-shield2]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url2]: https://www.linkedin.com/in/softwaredeveloperyairfacio/
+[hireable]: https://cdn.rawgit.com/hiendv/hireable/master/styles/flat/yes.svg
+[hireable-url]: https://www.linkedin.com/in/softwaredeveloperyairfacio/
 
